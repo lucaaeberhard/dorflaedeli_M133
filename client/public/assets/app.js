@@ -14269,7 +14269,7 @@
           ]),
           _vm._v(" "),
           _c("p", { staticClass: "mb-3 text-lg font-bold text-orange" }, [
-            _vm._v("$ " + _vm._s(_vm.product.price)),
+            _vm._v("$ " + _vm._s(_vm.product.price.toFixed(2))),
           ]),
         ]),
         _vm._v(" "),
@@ -14670,7 +14670,7 @@
             _vm._v(" "),
             _c("p", { staticClass: "mt-6" }, [
               _c("span", { staticClass: "font-semibold text-2xl text-orange" }, [
-                _vm._v("$ " + _vm._s(_vm.product.price)),
+                _vm._v("$ " + _vm._s(_vm.product.price.toFixed(2))),
               ]),
             ]),
             _vm._v(" "),
@@ -14922,7 +14922,7 @@
           },
           [
             _c("div", { staticClass: "w-1/3 md:w-32 text-center" }, [
-              _vm._v("$ " + _vm._s(_vm.product.price)),
+              _vm._v("$ " + _vm._s(_vm.product.price.toFixed(2))),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "w-1/3 md:w-32 text-center px-3" }, [
@@ -14976,7 +14976,12 @@
             _c(
               "div",
               { staticClass: "w-1/3 text-center md:w-32 md:text-right px-3" },
-              [_vm._v("$ " + _vm._s(_vm.product.price * _vm.product.quantity))]
+              [
+                _vm._v(
+                  "$ " +
+                    _vm._s((_vm.product.price * _vm.product.quantity).toFixed(2))
+                ),
+              ]
             ),
           ]
         ),
@@ -15019,7 +15024,12 @@
   var script$7 = {
     name: "Checkout",
     components: {NavBar: __vue_component__, ProductCart: __vue_component__$6},
-    computed: __assign$1(__assign$1({}, mapState("cart", ["carts", "tax"])), mapGetters("cart", ["totalTax", "totalCart", "totalAmount", "totalGrand"]))
+    computed: __assign$1(__assign$1({}, mapState("cart", ["carts", "tax"])), mapGetters("cart", ["totalTax", "totalCart", "totalAmount", "totalGrand"])),
+    methods: {
+      goToMain() {
+        this.$router.push("/");
+      }
+    }
   };
 
   /* script */
@@ -15077,7 +15087,7 @@
                           _vm._v(" "),
                           _c("div", { staticClass: "text-right" }, [
                             _c("strong", { staticClass: "text-base" }, [
-                              _vm._v("$ " + _vm._s(_vm.totalAmount)),
+                              _vm._v("$ " + _vm._s(_vm.totalAmount.toFixed(2))),
                             ]),
                           ]),
                         ]),
@@ -15097,7 +15107,7 @@
                             _vm._v(" "),
                             _c("div", { staticClass: "text-right" }, [
                               _c("strong", { staticClass: "text-base" }, [
-                                _vm._v("$ " + _vm._s(_vm.totalTax)),
+                                _vm._v("$ " + _vm._s(_vm.totalTax.toFixed(2))),
                               ]),
                             ]),
                           ]
@@ -15114,7 +15124,7 @@
                             _vm._v(" "),
                             _c("div", { staticClass: "text-right" }, [
                               _c("strong", { staticClass: "text-base" }, [
-                                _vm._v("$ " + _vm._s(_vm.totalGrand)),
+                                _vm._v("$ " + _vm._s(_vm.totalGrand.toFixed(2))),
                               ]),
                             ]),
                           ]
@@ -15125,7 +15135,11 @@
                           {
                             staticClass:
                               "button button-blue rounded-md mt-5 w-full",
-                            attrs: { disabled: "" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.goToMain()
+                              },
+                            },
                           },
                           [_vm._v("Proceed to Checkout")]
                         ),

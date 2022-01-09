@@ -35,7 +35,7 @@
         <p class="leading-relaxed">{{ product.description }}</p>
 
         <p class="mt-6">
-          <span class="font-semibold text-2xl text-orange">$ {{ product.price }}</span>
+          <span class="font-semibold text-2xl text-orange">$ {{ product.price.toFixed(2) }}</span>
         </p>
 
         <div class="flex flex-wrap items-center mt-6">

@@ -24,7 +24,7 @@
                   <span class="text-base">Subtotal</span>
                 </div>
                 <div class="text-right">
-                  <strong class="text-base">$ {{ totalAmount }}</strong>
+                  <strong class="text-base">$ {{ totalAmount.toFixed(2) }}</strong>
                 </div>
               </div>
               <div class="flex flex-wrap py-3 border-t border-gray-300">
@@ -32,7 +32,7 @@
                   <span class="text-base">Incl. {{ tax }} % Tax </span>
                 </div>
                 <div class="text-right">
-                  <strong class="text-base">$ {{ totalTax }}</strong>
+                  <strong class="text-base">$ {{ totalTax.toFixed(2) }}</strong>
                 </div>
               </div>
               <div class="flex flex-wrap py-3 border-t border-gray-300">
@@ -40,10 +40,10 @@
                   <span class="text-base">Order Total</span>
                 </div>
                 <div class="text-right">
-                  <strong class="text-base">$ {{ totalGrand }}</strong>
+                  <strong class="text-base">$ {{ totalGrand.toFixed(2) }}</strong>
                 </div>
               </div>
-              <button class="button button-blue rounded-md mt-5 w-full" disabled>Proceed to Checkout</button>
+              <button class="button button-blue rounded-md mt-5 w-full" @click="goToMain()">Proceed to Checkout</button>
             </div>
           </div>
         </div>
@@ -67,5 +67,10 @@ export default {
     ...mapState('cart', ['carts', 'tax']),
     ...mapGetters('cart', ['totalTax', 'totalCart', 'totalAmount', 'totalGrand']),
   },
+  methods: {
+    goToMain() {
+      this.$router.push('/'); 
+    }
+  }
 }
 </script>

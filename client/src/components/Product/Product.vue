@@ -11,7 +11,7 @@
       <h2 class="text-gray-900 text-base font-medium my-3">
         {{ product.title }}
       </h2>
-      <p class="mb-3 text-lg font-bold text-orange">$ {{ product.price }}</p>
+      <p class="mb-3 text-lg font-bold text-orange">$ {{ product.price.toFixed(2) }}</p>
     </div>
     <div class="px-3">
       <router-link

@@ -29,7 +29,7 @@
         lg:w-auto
       "
     >
-      <div class="w-1/3 md:w-32 text-center">$ {{ product.price }}</div>
+      <div class="w-1/3 md:w-32 text-center">$ {{ product.price.toFixed(2) }}</div>
       <div class="w-1/3 md:w-32 text-center px-3">
         <div class="text-center md:text-auto md:flex md:flex-wrap md:items-center md:justify-center">
           <button class="button" @click.prevent="removeProductFromCart(product)">-</button>
@@ -37,7 +37,7 @@
           <button class="button" @click.prevent="addProductToCart(product)">+</button>
         </div>
       </div>
-      <div class="w-1/3 text-center md:w-32 md:text-right px-3">$ {{ product.price * product.quantity }}</div>
+      <div class="w-1/3 text-center md:w-32 md:text-right px-3">$ {{ (product.price * product.quantity).toFixed(2) }}</div>
     </div>
   </div>
 </template>
