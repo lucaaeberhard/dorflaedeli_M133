@@ -6,29 +6,10 @@
           to="/"
           class="flex items-center text-3xl text-white leading-none uppercase relative"
         >
-          <span>S</span>
+          <span>Dorflädeli</span>
         </router-link>
         <div class="flex-1 w-0 text-right">
-          <router-link
-            to="/login"
-            class="ml-4 font-medium text-white inline-block align-middle relative"
-            v-if="!authenticated"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              class="w-6 h-6 text-white inline-block align-middle"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-          </router-link>
+          
           <a
             href="#"
             class="ml-4 font-medium text-white inline-block align-middle relative"
@@ -75,23 +56,6 @@
         </div>
       </div>
     </header>
-    <nav class="bg-white shadow" v-if="isCategory">
-      <div class="max-w-5xl mx-auto px-5">
-        <ol>
-          <li
-            class="inline-block align-middle"
-            v-for="category in categories"
-            :key="category.id"
-          >
-            <router-link
-              :to="`/category/${category.slug}`"
-              class="block text-base p-2 border-b-2 border-transparent lg:text-lg lg:p-3 hover:border-orange"
-              >{{ category.name }}</router-link
-            >
-          </li>
-        </ol>
-      </div>
-    </nav>
   </div>
 </template>
 

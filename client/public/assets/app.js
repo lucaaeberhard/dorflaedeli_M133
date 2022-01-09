@@ -14098,49 +14098,13 @@
                   "flex items-center text-3xl text-white leading-none uppercase relative",
                 attrs: { to: "/" },
               },
-              [_c("span", [_vm._v("S")])]
+              [_c("span", [_vm._v("Dorflädeli")])]
             ),
             _vm._v(" "),
             _c(
               "div",
               { staticClass: "flex-1 w-0 text-right" },
               [
-                !_vm.authenticated
-                  ? _c(
-                      "router-link",
-                      {
-                        staticClass:
-                          "ml-4 font-medium text-white inline-block align-middle relative",
-                        attrs: { to: "/login" },
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass:
-                              "w-6 h-6 text-white inline-block align-middle",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              fill: "none",
-                              viewBox: "0 0 24 24",
-                              stroke: "currentColor",
-                            },
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                "stroke-linecap": "round",
-                                "stroke-linejoin": "round",
-                                "stroke-width": "2",
-                                d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-                              },
-                            }),
-                          ]
-                        ),
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
                 _vm.authenticated
                   ? _c(
                       "a",
@@ -14232,38 +14196,6 @@
           1
         ),
       ]),
-      _vm._v(" "),
-      _vm.isCategory
-        ? _c("nav", { staticClass: "bg-white shadow" }, [
-            _c("div", { staticClass: "max-w-5xl mx-auto px-5" }, [
-              _c(
-                "ol",
-                _vm._l(_vm.categories, function (category) {
-                  return _c(
-                    "li",
-                    {
-                      key: category.id,
-                      staticClass: "inline-block align-middle",
-                    },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass:
-                            "block text-base p-2 border-b-2 border-transparent lg:text-lg lg:p-3 hover:border-orange",
-                          attrs: { to: "/category/" + category.slug },
-                        },
-                        [_vm._v(_vm._s(category.name))]
-                      ),
-                    ],
-                    1
-                  )
-                }),
-                0
-              ),
-            ]),
-          ])
-        : _vm._e(),
     ])
   };
   var __vue_staticRenderFns__ = [];
@@ -14272,7 +14204,7 @@
     /* style */
     const __vue_inject_styles__ = undefined;
     /* scoped */
-    const __vue_scope_id__ = "data-v-0a5e0c23";
+    const __vue_scope_id__ = "data-v-5ebb6b18";
     /* module identifier */
     const __vue_module_identifier__ = undefined;
     /* functional template */
