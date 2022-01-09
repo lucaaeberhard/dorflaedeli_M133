@@ -14620,50 +14620,6 @@
               _vm._v("\n        " + _vm._s(_vm.product.title) + "\n      "),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "flex mb-4" }, [
-              _c(
-                "span",
-                { staticClass: "flex items-center" },
-                [
-                  _vm._l(5, function (n) {
-                    return _c(
-                      "svg",
-                      {
-                        key: n,
-                        staticClass: "w-4 h-4 text-orange",
-                        attrs: {
-                          fill: _vm.fillStar(n, _vm.product.rating),
-                          stroke: "currentColor",
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          viewBox: "0 0 24 24",
-                        },
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            d: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
-                          },
-                        }),
-                      ]
-                    )
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "text-gray-700 ml-3" }, [
-                    _vm._v(
-                      "\n            " +
-                        _vm._s(_vm.product.rating) +
-                        "\n            " +
-                        _vm._s(_vm.product.rating > 1 ? "Reviews" : "Review") +
-                        "\n          "
-                    ),
-                  ]),
-                ],
-                2
-              ),
-            ]),
-            _vm._v(" "),
             _c("p", { staticClass: "leading-relaxed" }, [
               _vm._v(_vm._s(_vm.product.description)),
             ]),
@@ -14690,36 +14646,6 @@
                   [_vm._v("\n            Add To Cart\n          ")]
                 ),
               ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "\n            rounded-full\n            w-10\n            h-10\n            bg-gray-200\n            border-0\n            inline-flex\n            items-center\n            justify-center\n            text-gray-500\n            ml-4\n          ",
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "w-5 h-5",
-                      attrs: {
-                        fill: "currentColor",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        viewBox: "0 0 24 24",
-                      },
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d: "M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z",
-                        },
-                      }),
-                    ]
-                  ),
-                ]
-              ),
             ]),
           ]),
         ]),
